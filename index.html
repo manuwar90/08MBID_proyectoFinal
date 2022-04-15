@@ -16,17 +16,214 @@
           <h1>Manuel López Martínez - Proyecto Final</h1>
         </div>
         <div class="cuerpo">
-          <!-- Cuerpo donde irán las visualizaciones -->
-          <p>
+          <p> <!-- Inicio párrafo princial del cuerpo -->
             <b> URL: </b> <a href='https://js-nguxav.stackblitz.io'> https://js-nguxav.stackblitz.io </a> </br>
             <b> GIT: </b> <a href='https://github.com/manuwar90/08MBID_proyectoFinal'> https://github.com/manuwar90/08MBID_proyectoFinal </a> </br> </br>
             <h1> INTRODUCCIÓN </h1> </br> 
-            <p> En este trabajo final de la asignatura de Visualización de datos del Máster Universitario en Big Data y Data Science, se ha desarrollado un cuadro de mando destinado a directivos del Real Madrid con el fin de evaluar los resultados del equipo a lo largo de los años </p>
+            <p> 
+              En este trabajo final de la asignatura de Visualización de datos del Máster Universitario en Big Data y Data Science, se ha desarrollado un cuadro de mando destinado a cuerpos técnicos y directivos del Real Madrid C.F. El principal objetivo es dotar  al club de una representación de la información con el objetivo de poder revisar aquellos datos más relevantes del equipo y así poder potenciar debilidades y/o tomar decisiones. En este caso, los datos analizados/presentados han sido los correspondientes a los partidos llevados a cabo durante los años 2006-2021. </br> </br>
+
+              Como fuente de datos se ha utilizado el dataset empleado en las dos actividades de la asignatura 05MIBD Minería de datos. Dicho dataset fue descargado (en formato csv) de <a href="https://www.footballdata.
+              co.uk/spainm.php"> football-data</a>, una web de apuestas del Reino Unido. En la asignatura de minería de datos se realizó el preprocesado de datos correspondiente, donde se realizaron diversas tareas de limpieza y transformaciones, tales como: </br> 
+              <ul>
+                <li> Cálculo de la característica <b>"Jornada"</b> en funcion de la fecha del partido y el año.</li>
+                <li> Generación de la característica <b>"Remontada"</b>.</li>
+                <li> Separación del campo fecha en <b>día</b>, <b>mes</b> y <b>año</b>.</li>
+                <li> Selección de las instancias del Real Madrid.</li>
+                <li> Eliminación de las características que hacían referencia a las casas de apuestas.</li>
+              </ul>
+              <p>
+                Finalmente tras el preprocesado de datos se obtuvo un dataset con 585 instancias y 23 características: </br> </br>
+              </p>
+              <table border="1">
+                <tr>
+                  <th> Nº </th>
+                  <th> Característicia </th>
+                  <th> Descripción </th>
+                  <th> Tipo característica </th>
+                </tr>
+                <tr>
+                  <td> 1 </td>
+                  <td> Día </td>
+                  <td> Día en la que se jugó el partido</td>
+                  <td> Integer </td>
+                </tr>
+                <tr>
+                  <td> 2 </td>
+                  <td> Mes </td>
+                  <td> Mes en la que se jugó el partido</td>
+                  <td> Integer </td>
+                </tr>
+                <tr>
+                  <td> 3 </td>
+                  <td> Anyo </td>
+                  <td> Año en la que se jugó el partido</td>
+                  <td> Integer </td>
+                </tr>
+                <tr>
+                  <td> 4 </td>
+                  <td> Jornada </td>
+                  <td> Número de jornada liguera</td>
+                  <td> Integer </td>
+                </tr>
+                <tr>
+                  <td> 5 </td>
+                  <td> HomeTeam </td>
+                  <td> Equipo que juega como local</td>
+                  <td> String </td>
+                </tr>
+                <tr>
+                  <td> 6 </td>
+                  <td> AwayTeam </td>
+                  <td> Equipo que juega como visitante</td>
+                  <td> String </td>
+                </tr>
+                <tr>
+                  <td> 7 </td>
+                  <td> FTHG </td>
+                  <td> Número de goles del equipo local</td>
+                  <td> Integer </td>
+                </tr>
+                <tr>
+                  <td> 8 </td>
+                  <td> FTAG </td>
+                  <td> Número de goles del equipo visitante</td>
+                  <td> Integer </td>
+                </tr>
+                <tr>
+                  <td> 9 </td>
+                  <td> Remontada </td>
+                  <td> Indica que al Real Madrid le han remontado el partido</td>
+                  <td> Integer [0,1] </td>
+                </tr>
+                <tr>
+                  <td> 10 </td>
+                  <td> FTR </td>
+                  <td> Resultado final del partido</td>
+                  <td> String (H = Gana el equipo local, D = Empate y A = Gana el equipo visitante) </td>
+                </tr>
+                <tr>
+                  <td> 11 </td>
+                  <td> HTHG </td>
+                  <td> Número de goles del equipo local al descanso</td>
+                  <td> Integer </td>
+                </tr>
+                <tr>
+                  <td> 12 </td>
+                  <td> HTAG </td>
+                  <td> Número de goles del equipo visitante al descanso</td>
+                  <td> Integer </td>
+                </tr>
+                <tr>
+                  <td> 13 </td>
+                  <td> HS </td>
+                  <td> Tiros del equipo local</td>
+                  <td> Integer </td>
+                </tr>
+                <tr>
+                  <td> 14 </td>
+                  <td> AS </td>
+                  <td> Tiros del equipo visitante</td>
+                  <td> Integer </td>
+                </tr>
+                <tr>
+                  <td> 15 </td>
+                  <td> HST </td>
+                  <td> Tiros del equipo local a puerta</td>
+                  <td> Integer </td>
+                </tr>
+                <tr>
+                  <td> 16 </td>
+                  <td> AST </td>
+                  <td> Tiros del equipo visitante a puerta</td>
+                  <td> Integer </td>
+                </tr>
+                <tr>
+                  <td> 17 </td>
+                  <td> HF </td>
+                  <td> Faltas cometidas por el equipo local</td>
+                  <td> Integer </td>
+                </tr>
+                <tr>
+                  <td> 18 </td>
+                  <td> AF </td>
+                  <td> Faltas cometidas por el equipo visitante</td>
+                  <td> Integer </td>
+                </tr>
+                <tr>
+                  <td> 19 </td>
+                  <td> HC </td>
+                  <td> Córners el equipo local</td>
+                  <td> Integer </td>
+                </tr>
+                <tr>
+                  <td> 20 </td>
+                  <td> AC </td>
+                  <td> Córners el equipo visitante</td>
+                  <td> Integer </td>
+                </tr>
+                <tr>
+                  <td> 21 </td>
+                  <td> HY </td>
+                  <td> Tarjetas amarillas del equipo local</td>
+                  <td> Integer </td>
+                </tr>
+                <tr>
+                  <td> 22 </td>
+                  <td> AY </td>
+                  <td> Tarjetas amarillas del equio visitante</td>
+                  <td> Integer </td>
+                </tr>
+                <tr>
+                  <td> 22 </td>
+                  <td> HR </td>
+                  <td> Tarjetas rojas del equipo local</td>
+                  <td> Integer </td>
+                </tr>
+                <tr>
+                  <td> 23 </td>
+                  <td> AR </td>
+                  <td> Tarjetas rojas del equipo visitante</td>
+                  <td> Integer </td>
+                </tr>
+                <tr>
+                  <td> 24 </td>
+                  <td> HFKC </td>
+                  <td> Penalis concedidos al equipo local</td>
+                  <td> Integer </td>
+                </tr>
+                <tr>
+                  <td> 25 </td>
+                  <td> AFKC </td>
+                  <td> Penaltis concedidos al equipo visitante</td>
+                  <td> Integer </td>
+                </tr>
+              </table>
+              </br>
+            </p> <!-- Fin párrafo de la introducción -->
+            <h2> OBJETIVOS </h2>
+            <p> <!-- Inicio párrafo objetivos --> 
+              Habitualmente, hay dos equipos que a lo largo de la historia de la liga española han estado alternándose el título liguero. Estos equipos son: <b>Real Madrid</b> y <b>Barcelona</b>. Aunque, existen otro equipos donde a lo largo de su historia han despuntado y peleado, e incluso han ganado la liga, como son: <b>Atlético de Madrid</b>, <b>Athletic</b>, <b>Valencia</b>, <b>Real Sociedad</b>, <b>Real Betis</b>, <b>Sevilla</b> y <b>Deportivo</b>. </br>
+
+              En el mundo del fútbol no siempre gana el que tiene la mejor plantilla, mejores jugadores o más potencia económica. La <b> regularidad </b> que un equipo tiene a lo largo del campeonato juega un papel fundamental, pudiéndose decidir el ganador en pequeños detalles. Son en estos detalles (encuentros) donde equipos favoritos se dejan puntos, provocando que al final no se obtenga el título de campeón de liga. </br>
+
+              Con las visualizaciones llevadas a cabo se pretende como objetivo principal poder detectar esos momentos en los que el madrid se deja puntos.
+            </p> <!-- Fin párrafo objetivos --> 
+          </p> <!-- Inicio párrafo princial del cuerpo -->
+        </br><h2> VISUALIZACIONES  </h2> </br> 
+          <p> <!-- Inicio párrafo visualizaciones --> 
+             En este apartado, se muestran las visualizaciones creadas para la actividad. En primer lugar, se ha desarrollado un pequeño cuadro de mando mediante la aplicación Power Bi. El motivo de la elección del uso de esta aplicación se debe a una cuestión personal, ya que desde que dimos en clase la aplicación me gustó mucho y he querido seguir utilizándola para adquirir conocimiento en ella. </br>
+
+             El cuadro de mando desarrollado consta de 
+          </p> <!-- Fin párrafo visualizaciones --> 
+
           <div witdh="100%" height="100%">  
             <p> 
                 <iframe title="proyectoFinal" width="100%" height="800px" src="https://app.powerbi.com/reportEmbed?reportId=d3181903-6d64-4510-ab8a-8694cf49ca7f&autoAuth=true&ctid=02674ef9-5c2c-47d0-b2bc-595a784dda00&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXdlc3QtZXVyb3BlLWItcHJpbWFyeS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
             </p>
-          </p>
+            <p>
+              Continuamos
+            </p>
         </div>
       </section>
       <footer>
