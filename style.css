@@ -33,12 +33,6 @@ p {
 }
 
 /* CLASES GENERALES */
-.Imagen_cuerpo {
-  width: 80%;
-  height: 300px;
-  padding-left: 20px;
-}
-
 .Texto_encabezado {
   height: 50px;
   background-color: #da8204;
@@ -47,15 +41,10 @@ p {
 }
 
 #contenedor {
-  width: 968px;
+  width: 80%;
+  height: 100%;
   margin: 0 auto;
   background: #f2f1f2;
-}
-
-#superior {
-  height: 32px;
-  width: 968px;
-  background-color: white;
 }
 
 /* ZONA DEL LOGO */
@@ -66,29 +55,21 @@ header {
   background-image: url('https://i.ibb.co/PjCSXQB/banner.png');
 }
 
-/* ZONA DE MENÚ */
-nav {
-  height: 52px;
-  width: 968px;
-  background-color: #f2daff;
-}
-
 /*  ZONA CUERPO */
 section {
-  height: 700px;
+  height: 100%;
   /*background-color: #C60;*/
 }
 
 footer {
   height: 50px;
-  width: 968px;
+  width: 100%;
   background-color: #da8204;
   color: #fff;
 }
 
 .Footer {
   text-align: left;
-  width: 75%;
   height: 45px;
   margin: 0;
 }
