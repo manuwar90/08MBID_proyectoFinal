@@ -22,10 +22,10 @@
             <b> GIT: </b> <a href='https://github.com/manuwar90/08MBID_proyectoFinal'> https://github.com/manuwar90/08MBID_proyectoFinal </a> </br> </br>
             <h1> INTRODUCCIÓN </h1> </br> 
             <p> 
-              En este trabajo final de la asignatura de Visualización de datos del Máster Universitario en Big Data y Data Science, se ha desarrollado un cuadro de mando destinado a cuerpos técnicos y directivos del Real Madrid C.F. El principal objetivo es dotar  al club de una representación de la información con el objetivo de poder revisar aquellos datos más relevantes del equipo y así poder potenciar debilidades y/o tomar decisiones. En este caso, los datos analizados/presentados han sido los correspondientes a los partidos llevados a cabo durante los años 2006-2021. </br> </br>
+              En este trabajo final de la asignatura de Visualización de datos del Máster Universitario en Big Data y Data Science, se han desarrollado una serie de visualizaciones con el propósito de ofrecer información relevante a cuerpos técnicos y directivos del Real Madrid C.F, con el objetivo de resaltar aquellos aspectos más relevantes del equipo y así poder potenciar debilidades y/o tomar decisiones. En este caso, los datos analizados/presentados han sido los correspondientes a los partidos de la liga BBVA llevados a cabo durante los años 2006-2021. </br> </br>
 
               Como fuente de datos se ha utilizado el dataset empleado en las dos actividades de la asignatura 05MIBD Minería de datos. Dicho dataset fue descargado (en formato csv) de <a href="https://www.footballdata.
-              co.uk/spainm.php"> football-data</a>, una web de apuestas del Reino Unido. En la asignatura de minería de datos se realizó el preprocesado de datos correspondiente, donde se realizaron diversas tareas de limpieza y transformaciones, tales como: </br> 
+              co.uk/spainm.php"> football-data</a>, una web de apuestas del Reino Unido. En la asignatura de minería de datos se realizó el preprocesado de datos correspondiente, donde se realizaron diversas tareas de limpieza y transformación, tales como: </br> 
               <ul>
                 <li> Cálculo de la característica <b>"Jornada"</b> en funcion de la fecha del partido y el año.</li>
                 <li> Generación de la característica <b>"Remontada"</b>.</li>
@@ -208,7 +208,15 @@
 
               En el mundo del fútbol no siempre gana el que tiene la mejor plantilla, mejores jugadores o más potencia económica. La <b> regularidad </b> que un equipo tiene a lo largo del campeonato juega un papel fundamental, pudiéndose decidir el ganador en pequeños detalles. Son en estos detalles (encuentros) donde equipos favoritos se dejan puntos, provocando que al final no se obtenga el título de campeón de liga. </br>
 
-              Con las visualizaciones llevadas a cabo se pretende como objetivo principal poder detectar esos momentos en los que el madrid se deja puntos.
+              Con las visualizaciones llevadas a cabo se pretende conseguir los siguientes objetivos: </br>
+              <ul>
+                <li> ¿Cuan de goleador es el Real Madrid C.F?.</li>
+                <li> ¿Cuál es la efectividad de victorias del Real Madrid C.F?</li>
+                <li> ¿Cual es la evolución del Real Madrid C.F en la liga?.</li>
+                <li> ¿Cuál es el equipo con el que más pierde el Real Madrid C.F? </li>
+                <li> ¿Cuales son las jornadas que en las que más puntos se deja el Real Madrid? </li>
+              </ul>
+
             </p> <!-- Fin párrafo objetivos --> 
           </p> <!-- Inicio párrafo princial del cuerpo -->
         </br><h2> VISUALIZACIONES  </h2> </br> 
@@ -220,10 +228,10 @@
 
           <div witdh="100%" height="100%">  
             <p> 
-                <iframe title="proyectoFinal" width="100%" height="800px" src="https://app.powerbi.com/reportEmbed?reportId=3d9b04c1-03c0-43a6-9417-51dad501d346&autoAuth=true&ctid=02674ef9-5c2c-47d0-b2bc-595a784dda00&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXdlc3QtZXVyb3BlLWItcHJpbWFyeS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+                <iframe title="proyectoFinal" width="100%" height="1400px" src="https://app.powerbi.com/reportEmbed?reportId=e0cb748e-48e0-4b48-9cd4-b1b2a763483d&autoAuth=true&ctid=02674ef9-5c2c-47d0-b2bc-595a784dda00&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXdlc3QtZXVyb3BlLWItcHJpbWFyeS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
             </p>
             <p>
-              En esta segunda parte, se ha utilizado como segunda herramienta <b> Google Sheet. </b> El análisis llevado a cabo en esta parte ha sido evaluar el rendimiento histórico del Real Madrid a lo largo de toda la historia de la liga, pero esta información no estaba disponible en el dataset comentado en la primera parte, por lo que realizando un web scraping como el que se vio en clase. La información adicional para conseguir la información necesaria se obtuvo de la web de <a href="https://es.wikipedia.org/wiki/Historial_de_la_Primera_Divisi%C3%B3n_de_Espa%C3%B1a "> wikipedia </a>. </br> </br>
+              En esta segunda parte, se ha utilizado como segunda herramienta <b> Google Sheet. </b> El análisis llevado a cabo en esta parte ha sido evaluar el rendimiento histórico del Real Madrid a lo largo de la historia de la liga. Pero, dado que esta información no estaba disponible en el dataset comentado en la primera parte, se ha realizado un <b>web scraping</b> como el que se vio en clase de la web de <a href="https://es.wikipedia.org/wiki/Historial_de_la_Primera_Divisi%C3%B3n_de_Espa%C3%B1a "> wikipedia </a>. </br> </br>
 
               <p style="text-align:center">
                 <iframe width="1071" height="784" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTJqsG6DBuliiScYO_ksKxcbvwchUzKSoqV0fHSKv9r9S5wGw6V7xjG0XrbO5y6WR5ec6tXBbl5voAA/pubchart?oid=132239261&amp;format=interactive"></iframe>
