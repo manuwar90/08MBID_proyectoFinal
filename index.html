@@ -24,7 +24,7 @@
             <p> 
               En este trabajo final de la asignatura de Visualización de datos del Máster Universitario en Big Data y Data Science, se han desarrollado una serie de visualizaciones con el propósito de ofrecer información relevante a cuerpos técnicos y directivos del Real Madrid C.F, con el objetivo de resaltar aquellos aspectos más relevantes del equipo y así poder potenciar debilidades y/o tomar decisiones. En este caso, los datos analizados/presentados han sido los correspondientes a los partidos de la liga BBVA llevados a cabo durante los años 2006-2021. </br> </br>
 
-              Como fuente de datos se ha utilizado el dataset empleado en las dos actividades de la asignatura 05MIBD Minería de datos. Dicho dataset fue descargado (en formato csv) de <a href="https://www.footballdata.
+              Como fuente de datos se ha utilizado el dataset empleado en las dos actividades de la asignatura <b>05MIBD Minería de datos</b>. Dicho dataset fue descargado (en formato csv) de <a href="https://www.footballdata.
               co.uk/spainm.php"> football-data</a>, una web de apuestas del Reino Unido. En la asignatura de minería de datos se realizó el preprocesado de datos correspondiente, donde se realizaron diversas tareas de limpieza y transformación, tales como: </br> 
               <ul>
                 <li> Cálculo de la característica <b>"Jornada"</b> en funcion de la fecha del partido y el año.</li>
@@ -213,7 +213,7 @@
                 <li> ¿Cuan de goleador es el Real Madrid C.F?.</li>
                 <li> ¿Cuál es la efectividad de victorias del Real Madrid C.F?</li>
                 <li> ¿Cual es la evolución del Real Madrid C.F en la liga?.</li>
-                <li> ¿Cuál es el equipo con el que más pierde el Real Madrid C.F? </li>
+                <li> ¿Cuáles son los equipos con el que más pierde el Real Madrid C.F? </li>
                 <li> ¿Cuales son las jornadas que en las que más puntos se deja el Real Madrid? </li>
               </ul>
 
@@ -221,14 +221,56 @@
           </p> <!-- Inicio párrafo princial del cuerpo -->
         </br><h2> VISUALIZACIONES  </h2> </br> 
           <p> <!-- Inicio párrafo visualizaciones --> 
-             En este apartado, se muestran las visualizaciones creadas para la actividad. En primer lugar, se ha desarrollado un pequeño cuadro de mando mediante la aplicación <b>Power Bi</b>. El motivo de la elección del uso de esta aplicación se debe a una cuestión personal, ya que desde que dimos en clase la aplicación me gustó mucho y he querido seguir utilizándola para adquirir conocimiento en ella. </br>
+             En este apartado, se muestran las visualizaciones creadas para la actividad. En primer lugar, se ha desarrollado un pequeño cuadro de mando mediante la aplicación <b>Power Bi</b>. He escogido el utilizar dicha aplicación por una cuestión personal, ya que desde que trabajamos en clase con la aplicación me gustó mucho y he querido seguir utilizándola para adquirir conocimiento en ella. </br>
 
-             El cuadro de mando desarrollado consta de 
+             Como se puede ver a continuación, el cuadro de mando desarrollado lo componen las siguientes visualizaciones: </br>
+             <table border="2" style="margin: 20px 80px 20px 80px">
+               <tr>
+                 <th> Nombre del gráfico </th>
+                 <th> Tipo de gráfico </th>
+                 <th> Explicación </th>
+               </tr>
+               <tr>
+                 <td> "Filtro selección de año" </td>
+                 <td> Segmentador de datos </td>
+                 <td> En este caso se ha utilizado un segmentador de datos con el fin de ofrecer una interacción dinámica al usuario, de manera que éste pueda visualizar la información filtrando por año</td>
+               </tr>
+               <tr>
+                  <td> "Porcentaje de resultados de partidos" </td>
+                  <td> Gráfico de anillos </td>
+                  <td> Se ha escogido es tipo de gráfico porque me permite representar los porcentajes de las tres categorías (ganados, perdidos y empatados). Adicionalmente, he utilizado el atributo del color para una representación más amigable (verde: ganados, amarillo: empatados y rojo: perdidos)</td>
+               </tr>
+               <tr>
+                <td> "Total de goles", "Goles por partido", "Total de tarjetas" y "Tarjetas por partido"  </td>
+                <td> Tarjetas </td>
+                <td> Se ha utilizado este tipo de gráfico ya que la idea era mostrar un resumen de el total de goles, promedio de goles por partido, total de tarjetas cometidas, promedio de tarjetas por partido</td>
+               </tr>
+               <tr>
+                <td> "Partidos ganados-perdidos por año" </td>
+                <td> Gráfico de columnas apiladas y de líneas </td>
+                <td> En este caso, se ha probado también el gráfico de barras agrupadas, pero dada la diferencia entre los valores de las categorías no quedaban bien simultáneamente. Finalmente, escogí este tipo de gráfico porque quería representar la tendencia de los partidos perdidos (debilidad a potenciar) a lo largo de las temporadas de la liga. Aquí de nuevo he jugado con el atributo del color, de manera que la línea de los partidos perdidos la he puesto en rojo. En cuanto al color lila es por un tema puramente comercial, ya que el color lila desde el comienzo de la historia del club ha estado muy ligado</td>
+               </tr>
+               <tr>
+                 <td> "Desglose por año de goles como Local y Visitante" </td>
+                 <td> Gráfico de columnas agrupadas </td>
+                 <td> Para la consecución de este objetivo probé con 3 tipos de gráficos (columnas agrupadas, gráfico de líneas y barras apiladas) y sin duda el que creo que mejor representa lo que quería mostrar es el de columnas agrupadas ya he utilizado el atributo de la longitud para visualizar de manera rápida y sencilla la diferencia de goles marcados como local y visitante.</td>
+               </tr>
+               <tr>
+                 <td> "Tarjetas provocadas como local por año" y "Tarjetas provocadas como visitante por año" </td>
+                 <td> Gráficos de columnas apiladas </td>
+                 <td> Para este caso se ha escogido el tipo de gráfico columnas apiladas ya que los valores y categorías a representar son muy pocas por lo que a nivel visual queda muy bien. Aquí de nuevo he jugado con el atributo del color (amarillo: tarjetas amarillas y rojo: tarjetas rojas).</td>
+               </tr>
+               <tr>
+                <td> "Top 5 de equipos que más nos han derrotado" y "Top 5 de jornadas - pérdida de puntos"</td>
+                <td> Gráficos de columnas apiladas </td>
+                <td> En este caso se ha querido reflejar un top 5 de equipos (gráfico de la izquierda) y jornadas (gráfico de la derecha), por ello se ha utilizado el atributo longitud. </td>
+              </tr>
+             </table>
           </p> <!-- Fin párrafo visualizaciones --> 
 
           <div witdh="100%" height="100%">  
             <p> 
-                <iframe title="proyectoFinal" width="100%" height="1400px" src="https://app.powerbi.com/reportEmbed?reportId=e0cb748e-48e0-4b48-9cd4-b1b2a763483d&autoAuth=true&ctid=02674ef9-5c2c-47d0-b2bc-595a784dda00&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXdlc3QtZXVyb3BlLWItcHJpbWFyeS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
+                <iframe title="proyectoFinal" width="100%" height="1400px" src="https://app.powerbi.com/reportEmbed?reportId=01e03370-f2a0-40fb-944a-f1023c9c3e58&autoAuth=true&ctid=02674ef9-5c2c-47d0-b2bc-595a784dda00&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXdlc3QtZXVyb3BlLWItcHJpbWFyeS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
             </p>
             <p>
               En esta segunda parte, se ha utilizado como segunda herramienta <b> Google Sheet. </b> El análisis llevado a cabo en esta parte ha sido evaluar el rendimiento histórico del Real Madrid a lo largo de la historia de la liga. Pero, dado que esta información no estaba disponible en el dataset comentado en la primera parte, se ha realizado un <b>web scraping</b> como el que se vio en clase de la web de <a href="https://es.wikipedia.org/wiki/Historial_de_la_Primera_Divisi%C3%B3n_de_Espa%C3%B1a "> wikipedia </a>. </br> </br>
