@@ -54,9 +54,11 @@ table {
 /* ZONA DEL LOGO */
 header {
   height: 139px;
-  width: 968px;
+  width: 100%;
   /*background-color: #FF0;*/
-  background-image: url('https://i.ibb.co/PjCSXQB/banner.png');
+  background-repeat: no-repeat;
+  background-image: url('https://i.ibb.co/smDJQD0/bannerr.png');
+  background-position: center;
 }
 
 /*  ZONA CUERPO */
