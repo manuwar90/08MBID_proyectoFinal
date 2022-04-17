@@ -22,7 +22,7 @@
             <b> GIT: </b> <a href='https://github.com/manuwar90/08MBID_proyectoFinal'> https://github.com/manuwar90/08MBID_proyectoFinal </a> </br> </br>
             <h1> INTRODUCCIÓN </h1> </br> 
             <p> 
-              En este trabajo final de la asignatura de Visualización de datos del Máster Universitario en Big Data y Data Science, se han desarrollado una serie de visualizaciones con el propósito de ofrecer información relevante a cuerpos técnicos y directivos del Real Madrid C.F, con el objetivo de resaltar aquellos aspectos más relevantes del equipo y así poder potenciar debilidades y/o tomar decisiones. En este caso, los datos analizados/presentados han sido los correspondientes a los partidos de la liga BBVA llevados a cabo durante los años 2006-2021. </br> </br>
+              En este trabajo final de la asignatura de <b>Visualización de datos</b> del <b>Máster Universitario en Big Data y Data Science</b>, se han desarrollado una serie de visualizaciones para cuerpos técnicos y directivos del Real Madrid C.F, con el objetivo de resaltar aquella información más relevante del club y así poder potenciar debilidades y/o tomar decisiones. En este caso, los datos analizados/presentados han sido los correspondientes a los partidos de la liga BBVA llevados a cabo durante los años 2006-2021. </br> </br>
 
               Como fuente de datos se ha utilizado el dataset empleado en las dos actividades de la asignatura <b>05MIBD Minería de datos</b>. Dicho dataset fue descargado (en formato csv) de <a href="https://www.footballdata.
               co.uk/spainm.php"> football-data</a>, una web de apuestas del Reino Unido. En la asignatura de minería de datos se realizó el preprocesado de datos correspondiente, donde se realizaron diversas tareas de limpieza y transformación, tales como: </br> 
@@ -34,179 +34,179 @@
                 <li> Eliminación de las características que hacían referencia a las casas de apuestas.</li>
               </ul>
               <p>
-                Finalmente tras el preprocesado de datos se obtuvo un dataset con 585 instancias y 23 características: </br> </br>
+                Finalmente, tras el preprocesado de datos se obtuvo un dataset con 585 instancias y 25 características: </br> </br>
               </p>
               <table border="1">
                 <tr>
                   <th> Nº </th>
-                  <th> Característicia </th>
-                  <th> Descripción </th>
-                  <th> Tipo característica </th>
+                  <th> CARACTERÍSTICA </th>
+                  <th> DESCRIPCIÓN </th>
+                  <th> TIPO DE CARACTERÍSTICA </th>
                 </tr>
                 <tr>
                   <td> 1 </td>
                   <td> Día </td>
-                  <td> Día en la que se jugó el partido</td>
-                  <td> Integer </td>
+                  <td> Día en el que se jugó el partido</td>
+                  <td> Cuantitativa discreta </td>
                 </tr>
                 <tr>
                   <td> 2 </td>
                   <td> Mes </td>
-                  <td> Mes en la que se jugó el partido</td>
-                  <td> Integer </td>
+                  <td> Mes en el que se jugó el partido</td>
+                  <td> Cuantitativa discreta </td>
                 </tr>
                 <tr>
                   <td> 3 </td>
                   <td> Anyo </td>
-                  <td> Año en la que se jugó el partido</td>
-                  <td> Integer </td>
+                  <td> Año en que se jugó el partido</td>
+                  <td> Cuantitativa discreta </td>
                 </tr>
                 <tr>
                   <td> 4 </td>
                   <td> Jornada </td>
                   <td> Número de jornada liguera</td>
-                  <td> Integer </td>
+                  <td> Cuantitativa discreta </td>
                 </tr>
                 <tr>
                   <td> 5 </td>
                   <td> HomeTeam </td>
                   <td> Equipo que juega como local</td>
-                  <td> String </td>
+                  <td> Cualitativa nominal </td>
                 </tr>
                 <tr>
                   <td> 6 </td>
                   <td> AwayTeam </td>
                   <td> Equipo que juega como visitante</td>
-                  <td> String </td>
+                  <td> Cualitativa nominal </td>
                 </tr>
                 <tr>
                   <td> 7 </td>
                   <td> FTHG </td>
                   <td> Número de goles del equipo local</td>
-                  <td> Integer </td>
+                  <td> Cuantitativa discreta </td>
                 </tr>
                 <tr>
                   <td> 8 </td>
                   <td> FTAG </td>
                   <td> Número de goles del equipo visitante</td>
-                  <td> Integer </td>
+                  <td> Cuantitativa discreta </td>
                 </tr>
                 <tr>
                   <td> 9 </td>
                   <td> Remontada </td>
                   <td> Indica que al Real Madrid le han remontado el partido</td>
-                  <td> Integer [0,1] </td>
+                  <td> Cuantitativa discreta [0,1] </td>
                 </tr>
                 <tr>
                   <td> 10 </td>
                   <td> FTR </td>
                   <td> Resultado final del partido</td>
-                  <td> String (H = Gana el equipo local, D = Empate y A = Gana el equipo visitante) </td>
+                  <td> Cualitativa nominal </td>
                 </tr>
                 <tr>
                   <td> 11 </td>
                   <td> HTHG </td>
                   <td> Número de goles del equipo local al descanso</td>
-                  <td> Integer </td>
+                  <td> Cuantitativa discreta </td>
                 </tr>
                 <tr>
                   <td> 12 </td>
                   <td> HTAG </td>
                   <td> Número de goles del equipo visitante al descanso</td>
-                  <td> Integer </td>
+                  <td> Cuantitativa discreta </td>
                 </tr>
                 <tr>
                   <td> 13 </td>
                   <td> HS </td>
                   <td> Tiros del equipo local</td>
-                  <td> Integer </td>
+                  <td> Cuantitativa discreta </td>
                 </tr>
                 <tr>
                   <td> 14 </td>
                   <td> AS </td>
                   <td> Tiros del equipo visitante</td>
-                  <td> Integer </td>
+                  <td> Cuantitativa discreta </td>
                 </tr>
                 <tr>
                   <td> 15 </td>
                   <td> HST </td>
                   <td> Tiros del equipo local a puerta</td>
-                  <td> Integer </td>
+                  <td> Cuantitativa discreta </td>
                 </tr>
                 <tr>
                   <td> 16 </td>
                   <td> AST </td>
                   <td> Tiros del equipo visitante a puerta</td>
-                  <td> Integer </td>
+                  <td> Cuantitativa discreta </td>
                 </tr>
                 <tr>
                   <td> 17 </td>
                   <td> HF </td>
                   <td> Faltas cometidas por el equipo local</td>
-                  <td> Integer </td>
+                  <td> Cuantitativa discreta </td>
                 </tr>
                 <tr>
                   <td> 18 </td>
                   <td> AF </td>
                   <td> Faltas cometidas por el equipo visitante</td>
-                  <td> Integer </td>
+                  <td> Cuantitativa discreta </td>
                 </tr>
                 <tr>
                   <td> 19 </td>
                   <td> HC </td>
                   <td> Córners el equipo local</td>
-                  <td> Integer </td>
+                  <td> Cuantitativa discreta </td>
                 </tr>
                 <tr>
                   <td> 20 </td>
                   <td> AC </td>
                   <td> Córners el equipo visitante</td>
-                  <td> Integer </td>
+                  <td> Cuantitativa discreta </td>
                 </tr>
                 <tr>
                   <td> 21 </td>
                   <td> HY </td>
                   <td> Tarjetas amarillas del equipo local</td>
-                  <td> Integer </td>
+                  <td> Cuantitativa discreta </td>
                 </tr>
                 <tr>
                   <td> 22 </td>
                   <td> AY </td>
                   <td> Tarjetas amarillas del equio visitante</td>
-                  <td> Integer </td>
+                  <td> Cuantitativa discreta </td>
                 </tr>
                 <tr>
                   <td> 22 </td>
                   <td> HR </td>
                   <td> Tarjetas rojas del equipo local</td>
-                  <td> Integer </td>
+                  <td> Cuantitativa discreta </td>
                 </tr>
                 <tr>
                   <td> 23 </td>
                   <td> AR </td>
                   <td> Tarjetas rojas del equipo visitante</td>
-                  <td> Integer </td>
+                  <td> Cuantitativa discreta </td>
                 </tr>
                 <tr>
                   <td> 24 </td>
                   <td> HFKC </td>
                   <td> Penalis concedidos al equipo local</td>
-                  <td> Integer </td>
+                  <td> Cuantitativa discreta </td>
                 </tr>
                 <tr>
                   <td> 25 </td>
                   <td> AFKC </td>
                   <td> Penaltis concedidos al equipo visitante</td>
-                  <td> Integer </td>
+                  <td> Cuantitativa discreta </td>
                 </tr>
               </table>
               </br>
             </p> <!-- Fin párrafo de la introducción -->
             <h2> OBJETIVOS </h2>
             <p> <!-- Inicio párrafo objetivos --> 
-              Habitualmente, hay dos equipos que a lo largo de la historia de la liga española han estado alternándose el título liguero. Estos equipos son: <b>Real Madrid</b> y <b>Barcelona</b>. Aunque, existen otro equipos donde a lo largo de su historia han despuntado y peleado, e incluso han ganado la liga, como son: <b>Atlético de Madrid</b>, <b>Athletic</b>, <b>Valencia</b>, <b>Real Sociedad</b>, <b>Real Betis</b>, <b>Sevilla</b> y <b>Deportivo</b>. </br>
+              Habitualmente, hay dos equipos que a lo largo de la historia de la liga española han estado alternándose el título liguero. Estos equipos son: <b>Real Madrid</b> y <b>Barcelona</b>. Aunque, existen otro equipos donde a lo largo de su historia han despuntado y peleado, e incluso han ganado la liga, como son: <b>Atlético de Madrid</b>, <b>Athletic</b>, <b>Valencia</b>, <b>Real Sociedad</b>, <b>Real Betis</b>, <b>Sevilla</b> y <b>Deportivo</b>. </br> </br>
 
-              En el mundo del fútbol no siempre gana el que tiene la mejor plantilla, mejores jugadores o más potencia económica. La <b> regularidad </b> que un equipo tiene a lo largo del campeonato juega un papel fundamental, pudiéndose decidir el ganador en pequeños detalles. Son en estos detalles (encuentros) donde equipos favoritos se dejan puntos, provocando que al final no se obtenga el título de campeón de liga. </br>
+              En el mundo del fútbol no siempre gana el que tiene la mejor plantilla, mejores jugadores o más potencia económica. La <b> regularidad </b> que un equipo tiene a lo largo del campeonato juega un papel fundamental, pudiéndose decidir el ganador en pequeños detalles. Son en estos detalles (encuentros) donde equipos favoritos se dejan puntos, provocando que al final no se obtenga el título de campeón de liga. </br> </br>
 
               Con las visualizaciones llevadas a cabo se pretende conseguir los siguientes objetivos: </br>
               <ul>
@@ -220,40 +220,53 @@
             </p> <!-- Fin párrafo objetivos --> 
           </p> <!-- Inicio párrafo princial del cuerpo -->
         </br><h2> VISUALIZACIONES  </h2> </br> 
+        <h3> HERRAMIENTA 1 - POWER BI </h3>
           <p> <!-- Inicio párrafo visualizaciones --> 
-             En este apartado, se muestran las visualizaciones creadas para la actividad. En primer lugar, se ha desarrollado un pequeño cuadro de mando mediante la aplicación <b>Power Bi</b>. He escogido el utilizar dicha aplicación por una cuestión personal, ya que desde que trabajamos en clase con la aplicación me gustó mucho y he querido seguir utilizándola para adquirir conocimiento en ella. </br>
+             En este apartado, se muestran las visualizaciones creadas para la actividad. En primer lugar, se ha desarrollado un pequeño cuadro de mando mediante la aplicación <b>Power Bi</b>. En dicho cuadro de mando se pueden apreciar 4 filas donde hacen referencia a: </br>
+             <ol>
+               <li> La primera fila corresponde a un filtro para seleccionar el año.</li>
+               <li> En la segunda fila se indica digamos los principales indicadores: Resumen de porcentaje resultado de partidos, número y promedio de goles, número y promedio de tarjetas. </li>
+               <li> En la tercera fila se encuentran los gráficos con el detalle de los partidos ganados/perdidos, número de goles cuando el Real Madrid juega como local/visitante y el detalle de las tarjetas amarillas y rojas provocadas como local y visitante. </li>
+               <li> En la cuarta y última fila se indican 2 Top 5 sobre: Equipos que más nos han ganado y jornadas en las que el Real Madrid se suele dejar puntos, es decir, pierde o empata.
+             </ol>
+             
+             <p> 
+               He escogido el utilizar dicha aplicación por una cuestión personal, ya que desde que trabajamos en clase con la aplicación me gustó mucho y he querido seguir utilizándola para adquirir conocimiento en ella. </br>
+             </p>
 
-             Como se puede ver a continuación, el cuadro de mando desarrollado lo componen las siguientes visualizaciones: </br>
+             <p> 
+               A continuación, se pasa a detallar el tipo de visualizaciones implementadas en el cuadro de mando: </br>
+             </p>
              <table border="2" style="margin: 20px 80px 20px 80px">
                <tr>
-                 <th> Nombre del gráfico </th>
-                 <th> Tipo de gráfico </th>
-                 <th> Explicación </th>
+                 <th> NOMBRE DEL GRÁFICO </th>
+                 <th> TIPO DE GRÁFICO </th>
+                 <th> EXPLICACIÓN/DESCRIPCIÓN </th>
                </tr>
                <tr>
                  <td> "Filtro selección de año" </td>
                  <td> Segmentador de datos </td>
-                 <td> En este caso se ha utilizado un segmentador de datos con el fin de ofrecer una interacción dinámica al usuario, de manera que éste pueda visualizar la información filtrando por año</td>
+                 <td> En este caso se ha utilizado un segmentador de datos con el fin de ofrecer una interacción dinámica al usuario, de manera que éste pueda visualizar la información filtrando por año.</td>
                </tr>
                <tr>
                   <td> "Porcentaje de resultados de partidos" </td>
                   <td> Gráfico de anillos </td>
-                  <td> Se ha escogido es tipo de gráfico porque me permite representar los porcentajes de las tres categorías (ganados, perdidos y empatados). Adicionalmente, he utilizado el atributo del color para una representación más amigable (verde: ganados, amarillo: empatados y rojo: perdidos)</td>
+                  <td> Se ha escogido este tipo de gráfico porque me permite representar los porcentajes de las tres categorías (ganados, perdidos y empatados). Adicionalmente, he utilizado el atributo del color para una representación más amigable (verde: ganados, amarillo: empatados y rojo: perdidos).</td>
                </tr>
                <tr>
                 <td> "Total de goles", "Goles por partido", "Total de tarjetas" y "Tarjetas por partido"  </td>
                 <td> Tarjetas </td>
-                <td> Se ha utilizado este tipo de gráfico ya que la idea era mostrar un resumen de el total de goles, promedio de goles por partido, total de tarjetas cometidas, promedio de tarjetas por partido</td>
+                <td> Se ha utilizado este tipo de gráfico ya que la idea era mostrar un resumen de el total de goles, promedio de goles por partido, total de tarjetas cometidas, promedio de tarjetas por partido.</td>
                </tr>
                <tr>
                 <td> "Partidos ganados-perdidos por año" </td>
                 <td> Gráfico de columnas apiladas y de líneas </td>
-                <td> En este caso, se ha probado también el gráfico de barras agrupadas, pero dada la diferencia entre los valores de las categorías no quedaban bien simultáneamente. Finalmente, escogí este tipo de gráfico porque quería representar la tendencia de los partidos perdidos (debilidad a potenciar) a lo largo de las temporadas de la liga. Aquí de nuevo he jugado con el atributo del color, de manera que la línea de los partidos perdidos la he puesto en rojo. En cuanto al color lila es por un tema puramente comercial, ya que el color lila desde el comienzo de la historia del club ha estado muy ligado</td>
+                <td> En este caso, se ha probado también el gráfico de barras agrupadas, pero dada la diferencia entre los valores de las categorías no quedaban bien simultáneamente. Finalmente, escogí este tipo de gráfico porque quería representar la tendencia de los partidos perdidos (debilidad a potenciar) a lo largo de las temporadas de la liga. Aquí de nuevo he jugado con el atributo del color, de manera que la línea de los partidos perdidos la he puesto en rojo. En cuanto al color lila es por un tema puramente comercial, ya que es un color que a estado muy ligado a la historia del club. </td>
                </tr>
                <tr>
                  <td> "Desglose por año de goles como Local y Visitante" </td>
                  <td> Gráfico de columnas agrupadas </td>
-                 <td> Para la consecución de este objetivo probé con 3 tipos de gráficos (columnas agrupadas, gráfico de líneas y barras apiladas) y sin duda el que creo que mejor representa lo que quería mostrar es el de columnas agrupadas ya he utilizado el atributo de la longitud para visualizar de manera rápida y sencilla la diferencia de goles marcados como local y visitante.</td>
+                 <td> Para la consecución de este objetivo probé con 3 tipos de gráficos (columnas agrupadas, gráfico de líneas y barras apiladas) y sin duda el que creo que mejor representa lo que quería mostrar es el de columnas agrupadas. Adicionalmente, he utilizado el atributo de la longitud para visualizar de manera rápida y sencilla la diferencia de goles marcados como local y visitante.</td>
                </tr>
                <tr>
                  <td> "Tarjetas provocadas como local por año" y "Tarjetas provocadas como visitante por año" </td>
@@ -263,20 +276,55 @@
                <tr>
                 <td> "Top 5 de equipos que más nos han derrotado" y "Top 5 de jornadas - pérdida de puntos"</td>
                 <td> Gráficos de columnas apiladas </td>
-                <td> En este caso se ha querido reflejar un top 5 de equipos (gráfico de la izquierda) y jornadas (gráfico de la derecha), por ello se ha utilizado el atributo longitud. </td>
+                <td> En este caso se ha querido reflejar un top 5 de equipos (gráfico de la izquierda) y jornadas (gráfico de la derecha), por ello se ha utilizado el atributo longitud. Para el primero se probó con un word cloud (no quedaba mal) pero este tipo de gráficos solo disponen del tamaño y color como elementos distintivos, además cuando los dos primeros están muy igualados no se aprecia cual tiene más. Esto se ha conseguido con el gráfico de columnas donde con la posición y longitud se consigue ver de forma rápida y sin ambiguedades quienes son los equipos que más partidos han ganado al Real Madrid C.F.</td>
               </tr>
-             </table>
+             </table> </br>
           </p> <!-- Fin párrafo visualizaciones --> 
 
           <div witdh="100%" height="100%">  
             <p> 
                 <iframe title="proyectoFinal" width="100%" height="1400px" src="https://app.powerbi.com/reportEmbed?reportId=01e03370-f2a0-40fb-944a-f1023c9c3e58&autoAuth=true&ctid=02674ef9-5c2c-47d0-b2bc-595a784dda00&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXdlc3QtZXVyb3BlLWItcHJpbWFyeS1yZWRpcmVjdC5hbmFseXNpcy53aW5kb3dzLm5ldC8ifQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>
             </p>
-            <p>
-              En esta segunda parte, se ha utilizado como segunda herramienta <b> Google Sheet. </b> El análisis llevado a cabo en esta parte ha sido evaluar el rendimiento histórico del Real Madrid a lo largo de la historia de la liga. Pero, dado que esta información no estaba disponible en el dataset comentado en la primera parte, se ha realizado un <b>web scraping</b> como el que se vio en clase de la web de <a href="https://es.wikipedia.org/wiki/Historial_de_la_Primera_Divisi%C3%B3n_de_Espa%C3%B1a "> wikipedia </a>. </br> </br>
+            <p> 
+              Analizando el cuadro de mando para los últimos 15 años <b>(de 2006 a 2021)</b> se puede concluir los siguiente: </br>
+              <ul>
+                <li> Ha <b>ganado el 70% </b> de sus partidos en liga y tan solo <b>ha perdido un 14% de ellos.</b></li>
+                <li> Ha marcado un total de <b>1430 goles</b>, lo que equivale a tener un promedio de <b>2,3 goles por partido</b>. </li>
+                <li> Desglosando el desempeño del equipo jugando como local y visitante, se observa que en estos 15 años el Real Madrid <b>marca más goles jugando como local</b>. No obstante, cabe destacar que la <b>diferencia de goles entre jugar como local y como visitante no es muy destacada</b>, lo que refleja la gran <b>potencia goleadora</b> que tiene el Real Madrid C.F tanto fuera como dentro de casa.
+                <li> Sobre los partidos perdidos no se observa una tendencia como tal.</li>
+                <li> En lo que respecta a las tarjetas provocadas del equipo, tiene un total de <b>1381 tarjetas</b>, lo que equivale a una media de <b>2,2 tarjetas por partido</b>, de las cuales muy pocas son tarjetas rojas.</li>
+                <li> Por último, es necesario que el equipo tenga especial atención a los encuentros con el <b>Barcelona</b> y <b>Sevilla</b>, pues son los 2 <b>equipos que más nos han ganado</b>. Por otro lado, hay que estar atentos a las <b>primeras jornadas de la segunda vuelta</b>, ya que es donde <b>más puntos pierde</b> el Real Madrid. </li>
+              </ul>
+             </p>
+            <p> </br>
+              <h3> HERRAMIENTA 2 - GOOGLE SHEET </h3>
+              <p>
+                En esta segunda parte, se ha realizado un <b>análisis histórico</b> (de 1940 a 2021) del rendimiento de Real Madrid C.F utilizando como segunda herramienta <b> Google Sheet. </b> Dado que la información necesaria para llevar a cabo el análisis no venía en el primer dataset comentado, se ha realizado un <b>web scraping</b> (como el que se vio en clase) de <a href="https://es.wikipedia.org/wiki/Historial_de_la_Primera_Divisi%C3%B3n_de_Espa%C3%B1a "> wikipedia </a>. Este ha sido el principal motivo para decantarme por esta herramienta y es la facilidad que tiene de poder realizar el web scraping y obtener así la información necesaria, además de que dispone de una amplia gama de gráficos y su curva de aprendizaje es muy pequeña ya que es muy semejante a Excel.</br> </br>
 
-              <p style="text-align:center">
-                <iframe width="1071" height="784" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTJqsG6DBuliiScYO_ksKxcbvwchUzKSoqV0fHSKv9r9S5wGw6V7xjG0XrbO5y6WR5ec6tXBbl5voAA/pubchart?oid=132239261&amp;format=interactive"></iframe>
+                Al igual que se hizo en la primera parte, se pasa a detallar los gráficos utilizados: </br>
+
+                <table border="2" style="margin: 20px 80px 20px 80px">
+                  <tr>
+                    <th> NOMBRE DEL GRÁFICO </th>
+                    <th> TIPO DE GRÁFICO </th>
+                    <th> EXPLICACIÓN/DESCRIPCIÓN </th>
+                  </tr>
+                  <tr>
+                    <td> Porcentajes de posición de 1940 a 2021</td>
+                    <td> Gráfico de anillos </td>
+                    <td> Dado que las categorías que se pretendía visualizar (1º, 2º, 3º y 4º) eran muy pocas y además se predendía dar la información en formato de porcentaje, he escogido este gráfico ya que me parece el más adecuado para tal representación. Aquí he jugado con el atributo color y tono, de manera que el tono más fuerte equivale al primer puesto y el más claro al último (dentro del rango utilizado).</td>
+                  </tr>
+                  <tr>
+                    <td> Evolución de los puntos conseguido en la liga desde 1940 a 2021 </td>
+                    <td> Gráfico de líneas </td>
+                    <td> Se ha escogido este gráfico ya que se quería representar la evolución de los puntos conseguidos a lo largo del tiempo (años).</td>
+                  </tr>
+                  <tr>
+                    <td> Posición en la liga desde 1940 a 2021 </td>
+                    <td> Gráfico de áreas apiladas y escalonadas </td>
+                    <td> En este caso, se probaron diferentes tipos de gráficos (columnas y líneas), pero dado que los valores discretos se acotaron a 4, el resultado visual que se obtenía era muy pobre y apenas entendible dado el alto número de años (eje x). Finalmente, se optó por el gráfico de áreas apiladas y escalonadas ya que permitía poder visualizar de una forma sencilla la tendencia de la posición, además de visualizar de una forma cómoda aquellos años en los que la posición se ha repetido. Por otro lado, también permite visualizar la tendencia que se ha seguido a lo largo de estos años.</td>
+                  </tr>
+                </table>
               </p>
 
               <p style="text-align:center">
@@ -284,8 +332,27 @@
               </p>
 
               <p style="text-align:center">
+                <iframe width="1071" height="784" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTJqsG6DBuliiScYO_ksKxcbvwchUzKSoqV0fHSKv9r9S5wGw6V7xjG0XrbO5y6WR5ec6tXBbl5voAA/pubchart?oid=132239261&amp;format=interactive"></iframe>
+              </p>
+
+              <p style="text-align:center">
                 <iframe width="1071" height="662" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTJqsG6DBuliiScYO_ksKxcbvwchUzKSoqV0fHSKv9r9S5wGw6V7xjG0XrbO5y6WR5ec6tXBbl5voAA/pubchart?oid=1436361098&amp;format=interactive"></iframe>
               </p>
+
+              <p> 
+                Tras el análisis realizado en el periodo de 1940 y 2021 y de las 3 visualizaciones implementadas en google sheet se puede concluir lo siguiente: </br>
+                <ul>
+                  <li> El Real Madrid C.F ha terminado la liga en primera posición el 42,5% de las veces, un 22,5% en segunda posición, un 11,3% en tercera posición y un 23,8% en cuarta posición. Esto refleja que <b>en 80 años</b> el Real Madrid <b>no ha terminado la liga nunca por debajo del 4º puesto</b>. Cabe destacar que de 1957 a 1965 consiguió acabar de forma consecutiva en primera posición, consiguiendo el título de liga. Por desgracia en los últimos 11 años (2009 a 2021) la posición más habitual en la liga ha sido en segunda posición, consiguiendo el título de liga únicamente en 3 ocasiones.</b></li>
+                  <li> El Real Madrid C.F es un claro ejemplo de "menos a mas" pues a medida que se ha ido avanzando en la historia de la liga el equipo ha seguido una tendencia al alza en cuanto a la consecución de puntos, lo que se traduce en más <b>partidos ganados</b>. </li>
+                </ul>
+               </p>
+               <h1> CONCLUSIONES GENERALES EN EL DESARROLLO </h1>
+               <p>
+                  La visualización de datos representa un aspecto muy importante a la hora de ofrecer información relevante a la audiencia. La elección de un tipo de gráfico adecuado juega un papel fundamental de cara a conseguir transmitir los objetivos marcados. Tal y como se ha ido explicando, la elaboración de las visualizaciones mostradas y, en función del objetivo perseguido, se han probado diferentes tipos de gráficos con el fin de evaluar aquel que mejor visualización e interpetabilidad proporcionara. Así mismo, se han utilizado atributos como la longitud, posición, color y tono para enriqucer las visualizaciones implementadas en Power Bi y Google Sheet. </br> </br>
+
+                  <b>Fuente de datos 1</b>: <a href="https://www.footballdata.co.uk/spainm.php"> football-data (https://www.footballdata.co.uk/spainm.php)</a></br>
+                  <b>Fuente de datos 2</b>: <a href="https://es.wikipedia.org/wiki/Historial_de_la_Primera_Divisi%C3%B3n_de_Espa%C3%B1a "> https://es.wikipedia.org/wiki/Historial_de_la_Primera_Divisi%C3%B3n_de_Espa%C3%B1a </a>.</br>
+               </p>
             </p>
         </div>
       </section>
